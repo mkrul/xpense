@@ -19,9 +19,10 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: xpense
-  password: <%= ENV['XPENSE_DATABASE_PASSWORD'] %>
+  host: db
+  pool: 5
+  username: postgres
+  password: password
 
 development:
   <<: *default
